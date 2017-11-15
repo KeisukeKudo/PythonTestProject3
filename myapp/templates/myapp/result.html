@@ -1,0 +1,11 @@
+{%  block body %}
+{% if result_list %}
+{% for i in result_list %}
+    <p><img src="{{ i.image_url.url }}" /></p>
+    <p>
+        <input type="checkbox" name="delete_text" value="{{ i.id }}">
+        {{ i.new_message }} :{{ i.created_at }}
+    </p>
+{% endfor %}
+{% endif %}
+{% endblock %}
